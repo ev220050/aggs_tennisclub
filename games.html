@@ -1,17 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>AGGS Tennis | How to play</title>
+    <title>AGGS Tennis | Games</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="main.css">
 </head>
 <body>
+    <!-- Navigation -->
     <div class="nav-bar">
         <ul>
             <a href="index.html" class="index_nav">Home</a>
             <a href="join.html" class="join_nav">Join</a>
-            <a href="games.html" class="games_nav">Games</a>
+            <a href="games.html" class="games_nav active">Games</a>
             <a href="how_to_play.html" class="how_to_play_nav">How to play</a>
         </ul>
     </div>
@@ -19,45 +20,104 @@
         <img src="images/navy_logo.png" alt="Navy AGGS Logo">
     </div>
 
-
+    <!-- Page Header -->
     <h1>AGGS Tennis</h1>
-    <h2><strong>How to play</strong></h2>
-    <p>Tennis is a fun, fast-paced sport played with a ball and rackets over a net.
-        It can be played as singles (1 vs 1) or doubles (2 vs 2). The goal is to <br>
-        hit the ball over the net and land it inside the opponent’s court to score points.</p>
-<footer>
-    <table border="0" width="100%">
-        <tr>
-            <!-- Left side -->
-            <td width="50%">
-                <img src="logo.png" alt="AGGS Logo" width="120"><br>
-                <p>
-                    Auckland Girls’ Grammar School nurtures a culture of excellence through<br>
-                    whānaungatanga, manaakitanga and kairangatanga
-                </p>
-            </td>
+    <h2><strong>Games</strong></h2>
+    <p>Ready to rally? This is your go-to spot for all our upcoming matches and events.<br>
+        Find out who we’re playing, where the game is happening, and when to<br>
+        show up—because every serve counts, and we’d love to see you there.</p>
 
+    <!-- Main Content (flex: left = games, right = locations) -->
+    <div class="content-row">
+        <!-- Left column -->
+        <div class="games-section">
+            <h2>Social Games</h2>
+            <table>
+                <tr>
+                    <th>Date</th>
+                    <th>Time</th>
+                    <th>Team</th>
+                    <th>Locations</th>
+                </tr>
+                <tr>
+                    <td>Thursday 26 June</td>
+                    <td>3:30 PM</td>
+                    <td>AGGS 3 vs Epsom Girls</td>
+                    <td>Epsom Girls</td>
+                </tr>
+                <tr>
+                    <td>Thursday 3 July</td>
+                    <td>3:30 PM</td>
+                    <td>AGGS 4 vs Glendowie</td>
+                    <td>ATA</td>
+                </tr>
+            </table>
 
-            <!-- Right side -->
-            <td width="50%">
-                <h3>Information</h3>
-                <p>
-                    <b>Club leaders:</b> Nora & Jane<br>
-                    <b>Sports Director:</b> Mr Hipa<br>
-                    <b>Training:</b> Every Friday, 3:30pm–4:30pm<br>
-                    <b>Location:</b> Trainings at YMCA – 149 Greys Ave
-                </p>
+            <h2>Competitive Games</h2>
+            <table>
+                <tr>
+                    <th>Date</th>
+                    <th>Time</th>
+                    <th>Team</th>
+                    <th>Locations</th>
+                </tr>
+                <tr>
+                    <td>Monday 16 June</td>
+                    <td>3:30 PM</td>
+                    <td>AGGS 3 vs Epsom Girls</td>
+                    <td>Epsom Girls</td>
+                </tr>
+                <tr>
+                    <td>Monday 23 June</td>
+                    <td>3:30 PM</td>
+                    <td>AGGS 4 vs Glendowie</td>
+                    <td>ATA</td>
+                </tr>
+            </table>
+        </div>
 
+        <!-- Right column -->
+        <div class="locations-section">
+            <h2>Locations</h2>
+            <p><b>Epsom Girls’ Grammar School</b><br>
+                14 Silver Road, Epsom, Auckland 1023</p>
 
-                <h3>Contact Us</h3>
-                <p>
-                    📞 12345678<br>
-                    ✉️ tennisclub@aggs.school.nz<br>
-                    🌐 hipa@aggs.school.nz
-                </p>
-            </td>
-        </tr>
-    </table>
-</footer>
+            <p><b>Auckland Tennis Association (ATA)</b><br>
+                99 Gillies Avenue, Epsom, Auckland 1023</p>
+
+            <p><b>YMCA</b><br>
+                149 Greys Avenue, Central Auckland 1010</p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <table border="0" width="100%">
+            <tr>
+                <td width="50%">
+                    <img src="images/white_logo.png" alt="AGGS Logo" width="120"><br>
+                    <p>
+                        Auckland Girls’ Grammar School nurtures a culture of excellence through<br>
+                        whānaungatanga, manaakitanga and kairangatanga
+                    </p>
+                </td>
+                <td width="50%">
+                    <h3>Information</h3>
+                    <p>
+                        <b>Club leaders:</b> Nora & Jane<br>
+                        <b>Sports Director:</b> Mr Hipa<br>
+                        <b>Training:</b> Every Friday, 3:30pm–4:30pm<br>
+                        <b>Location:</b> Trainings at YMCA – 149 Greys Ave
+                    </p>
+                    <h3>Contact Us</h3>
+                    <p>
+                        📞 12345678<br>
+                        ✉️ badmintonclub@aggs.school.nz<br>
+                        🌐 hipa@aggs.school.nz
+                    </p>
+                </td>
+            </tr>
+        </table>
+    </footer>
 </body>
 </html>
