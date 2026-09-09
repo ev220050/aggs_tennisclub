@@ -1,228 +1,637 @@
 /* =========================
    DEFAULTS
    ========================= */
-/* Reset some defaults */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: Arial, sans-serif;
-}
-
-
-
-
-body {
-  background-color: #fff;
-  color: #f0b233; /* Gold text for headings */
-}
-
-
-
-
-/* Navbar */
-.nav-bar {
-  background-color: #fff;
-  display: flex;
-  justify-content: flex-end;
-  padding: 1rem 2rem;
-  border-bottom: 2px solid #f0b233;
-}
-
-
-
-
-.nav-bar ul {
-  list-style: none;
-  display: flex;
-  gap: 2rem;
-}
-
-
-
-
-.nav-bar a {
-  text-decoration: none;
-  font-weight: bold;
-  color: #0b2d5b;
-  padding: 0.5rem 1rem;
-  border-radius: 0.5rem;
-}
-
-
-
-
-.nav-bar a:hover, .nav-bar a.active {
-  background-color: #0b2d5b;
-  color: #fff;
-}
-
-
-
-
-/* Logo section*/
-.navy_logo {
-  position: absolute;
-  top: 1rem;
-  left: 2rem;
-}
-
-
-
-
-.navy_logo img {
-  height: 60px;
-}
-
-
-
-
-/* Main Heading section*/
-h1 {
-  color: #f0b233;
-  font-size: 3rem;
-  text-align: left;
-  margin-left: 2rem;
-  margin-top: 1rem;
-}
-
-
-
-
-h2 {
-  color: #f0b233;
-  font-size: 2rem;
-  margin: 1rem 2rem;
-}
-
-
-
-
-p {
-  color: #f0b233;
-  margin: 1rem 2rem;
-  line-height: 1.6;
-}
-
-
-
-
-/* Info Boxes section*/
-.info-boxes {
-  display: flex;
-  justify-content: space-between;
-  gap: 1rem;
-  margin: 2rem;
-  flex-wrap: wrap;
-}
-
-
-
-
-.info-boxes > div {
-  flex: 1 1 30%;
-  background-color: #0b2d5b;
-  border-radius: 10px;
-  overflow: hidden;
-  color: #f0b233;
-  display: flex;
-  flex-direction: column;
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-
-
-
-
-.info-boxes > div:hover {
-  transform: translateY(-5px);
-  box-shadow: 0px 10px 20px rgba(0,0,0,0.3);
-}
-
-
-
-
-.info-boxes img {
-  width: 100%;
-  height: 150px;
-  object-fit: cover;
-}
-
-
-
-
-.info-boxes .info {
-  padding: 1rem;
-}
-
-
-
-
-/* Button section*/
-button {
-  background-color: #f0b233;
-  color: #fff;
-  border: none;
-  padding: 0.8rem 1.5rem;
-  border-radius: 20px;
-  font-size: 1.2rem;
-  font-weight: bold;
-  cursor: pointer;
-  margin: 1rem 2rem;
-  transition: background-color 0.3s;
-}
-
-
-
-
-button:hover {
-  background-color: #d19e2f;
-}
-
-
-
-
-/* Footer section*/
-footer {
-  background-color: #0b2d5b;
-  color: #f0b233;
-  padding: 2rem;
-  margin-top: 2rem;
-}
-
-
-
-
-footer img {
-  margin-bottom: 1rem;
-}
-
-
-
-
-footer h3 {
-  color: #f0b233;
-  margin-bottom: 0.5rem;
-}
-
-
-
-
-footer p {
-  line-height: 1.5;
-}
-
-
-
-
-footer table {
-  width: 100%;
-}
-
-
-
-
-@media screen and (max-width: 900px) {
-  .info-boxes {
-      flex-direction: column;
-  }
-}
+   @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+
+   * {
+       margin: 0;
+       padding: 0;
+       box-sizing: border-box;
+       font-family: 'Poppins', sans-serif;
+   }
+   
+   
+   body {
+       background-color: #fff;
+       color: #f0b233; /* Gold text for headings */
+       margin: 0;
+       padding: 0 2rem;   /* puts spacing on left & right everywhere */
+   }
+   
+   
+   /* Navbar */
+   nav {
+       display: flex;
+       justify-content: space-between; /* left: logo+title | right: links */
+       align-items: center;
+       background-color: #fff;
+       padding: 1rem 2rem;
+       border-bottom: 2px solid #f0b233; /* gold accent */
+   }
+   
+   
+   /* left section: logo + divider + title */
+   .nav-left {
+       display: flex;
+       align-items: center;
+       gap: 0.8rem;
+   }
+   
+   
+   .navy_logo img {
+       height: 60px;
+   }
+   
+   
+   .divider {
+       width: 2px;
+       height: 60px;
+       background-color: #003768; /* navy line */
+   }
+   
+   
+   .site-title {
+       font-size: 1.8rem;
+       font-weight: bold;
+       color: #c9971a;
+   }
+   
+   
+   /* nav links */
+   nav ul {
+       list-style: none;
+       display: flex;
+       gap: 2rem;
+       margin: 0;
+       padding: 0;
+   }
+   
+   
+   nav a {
+       text-decoration: none;
+       font-weight: bold;
+       color: #0b2d5b;
+       padding: 0.5rem 1rem;
+       border-radius: 0.5rem;
+   }
+   
+   
+   /* hover + active states */
+   nav a:hover,
+   nav a.active {
+       background-color: #0b2d5b;
+       color: #fff;
+   }
+   
+   
+   .img-main {
+       position: relative;
+       border-radius: 16px;
+       overflow: hidden;
+       max-width: 100%;
+       margin: 0 auto;
+   }
+   
+   
+   /* Background image + gradient overlay (desktop default) */
+   .img-main::before {
+       content: "";
+       position: absolute;
+       inset: 0;
+       background:
+           linear-gradient(90deg, rgba(0,0,0,0.12) 0%, #003768 57%, #003768 100%),
+           url("images/home_tennis.jpg") center/cover no-repeat;
+       z-index: 1;
+   }
+   
+   
+   /* Text container */
+   .img-main .info {
+       position: relative;
+       z-index: 2; /* on top of gradient */
+       color: white;
+       max-width: 500px;
+       margin-left: auto;  /* pushes text to the right side */
+       padding: 2rem;
+       text-align: left;   /* writing flows normally */
+   }
+   
+   
+   /* Tablet screens */
+   @media (max-width: 768px) {
+       .img-main::before {
+           background:
+               linear-gradient(90deg, rgba(0,0,0,0.5) 0%, #003768 40%, #003768 100%),
+               url("images/join_tennis.jpg") center/cover no-repeat;
+       }
+   
+   
+       .img-main .info {
+           max-width: 100%;
+           padding: 1.5rem;
+       }
+   }
+   
+   
+   /* Mobile screens */
+   @media (max-width: 480px) {
+       .img-main::before {
+           background:
+               linear-gradient(90deg, rgba(0,0,0,0.7) 0%, #003768 20%, #003768 100%),
+               url("images/join_tennis.jpg") center/cover no-repeat;
+       }
+   }
+   
+   
+   /* Main Heading section*/
+   h1 {
+       color: #f0b233;
+       font-size: 3rem;
+       text-align: left;
+       margin-left: 2rem;
+       margin-top: 1rem;
+   }
+   
+   
+   
+   
+   h2 {
+       color: #f0b233;
+       font-size: 2rem;
+       margin: 1rem 2rem;
+   }
+   
+   
+   
+   
+   p {
+       color: #f0b233;
+       margin: 1rem 2rem;
+       line-height: 1.6;
+   }
+   
+   
+   /* Info Boxes container */
+   .info-boxes {
+       display: flex;
+       justify-content: space-between;
+       gap: 1rem;
+       margin-top: 2rem;
+       flex-wrap: wrap;
+   }
+   
+   
+   /* Each box */
+   .info-boxes > div {
+       flex: 1 1 30%;
+       border-radius: 12px;
+       overflow: hidden;
+       color: #fff;
+       position: relative;
+       transition: transform 0.3s, box-shadow 0.3s;
+   }
+   
+   
+   /* Hover effect */
+   .info-boxes > div:hover {
+       transform: translateY(-5px);
+       box-shadow: 0px 10px 20px rgba(0,0,0,0.3);
+   }
+   
+   
+   /* Image area with background */
+   .info-boxes .img {
+       position: relative;
+       height: 200px;
+       background-size: cover;
+       background-position: center;
+   }
+   
+   
+   /* Ombre overlay */
+   .info-boxes .img::after {
+       content: "";
+       position: absolute;
+       inset: 0;
+       background: linear-gradient(
+           to bottom,
+           rgba(0,0,0,0.2),
+           rgba(11,45,91,0.85)
+       );
+   }
+   
+   
+   /* Text on top of the overlay */
+   .info-boxes .info {
+       position: absolute;
+       bottom: 1rem;
+       left: 1rem;
+       right: 1rem;
+       z-index: 1;
+       font-size: 1rem;
+   }
+   
+   
+   .join-box .img {
+       background-image: url("images/join_tennis.jpg");
+   }
+   
+   
+   .games-box .img {
+       background-image: url("images/games_tennis.jpg");
+   }
+   
+   
+   .how-to-play-box .img {
+       background-image: url("images/how-to-play_tennis.jpg");
+   }
+   
+   
+   /* Button container */
+   .button {
+       text-align: center;   /* centers the button inside this container */
+       margin-top: 1.5rem;   /* spacing above */
+   }
+   
+   
+   /* Button styling */
+   .button a {
+       display: inline-block;
+       background-color: #f0b233;       /* bright yellow */
+       color: #fff;                     /* white text */
+       font-weight: bold;
+       text-decoration: none;
+       padding: 0.75rem 2rem;
+       border-radius: 8px;
+       box-shadow: 0 4px 0 #c9971a;     /* darker yellow shadow */
+       transition: all 0.2s ease-in-out;
+   }
+   
+   
+   /* Hover effect */
+   .button a:hover {
+       transform: translateY(-3px);
+       box-shadow: 0 6px 0 #c9971a;
+   }
+   
+   
+   /* Active click effect */
+   .button a:active {
+       transform: translateY(1px);
+       box-shadow: 0 2px 0 #c9971a;
+   }
+   
+   
+   .title-box h2 {
+     font-size: 2.5rem; /* increase this as you like */
+     font-weight: 700;
+     text-align: center;
+   }
+   
+   
+   /* =========================
+      HOW TO PLAY PAGE
+      ========================= */
+   
+   
+   /* Background image section */
+   .how-to-play {
+     background: url("images/how-to-play_tennis.jpg") center/cover no-repeat;
+     padding: 4rem 2rem;
+     min-height: 100vh;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     border-radius: 1.5rem;
+     overflow: hidden;
+   }
+   
+   
+   .how-to-play .overlay {
+     width: 100%;
+     max-width: 1200px;
+     margin: 0 auto;
+     text-align: center;
+     display: flex;
+     flex-direction: column;
+     gap: 2rem;
+   }
+   
+   
+   /* Shared glass box style - glass morphism effect*/
+   .glass-box {
+     background: rgba(0, 32, 96, 0.75); /* Navy glass */
+     border: 1px solid rgba(240, 178, 51, 0.3); /* gold border */
+     backdrop-filter: blur(10px);
+     -webkit-backdrop-filter: blur(10px);
+     border-radius: 1rem;
+     padding: 1.5rem 2rem;
+     color: #f0b233; /* gold text */
+     box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4);
+     position: relative;
+   }
+   
+   
+   .glass-box h2,
+   .glass-box h3 {
+     margin-bottom: 1rem;
+     position: relative;
+     display: inline-block;
+     text-align: center;
+   }
+   
+   
+   .glass-box h2::after,
+   .glass-box h3::after {
+     content: "";
+     display: block;
+     height: 2px;
+     width: 80%; /* inset from box edges */
+     margin: 0.4rem auto 0;
+     background-color: #f0b233; /* gold underline */
+   }
+   
+   
+   .subtitle-box {
+     font-size: 1.1rem;
+     line-height: 1.6;
+     max-width: 900px;
+     margin: 0 auto;
+     text-align: center;
+   }
+   
+   
+   .content-row {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     gap: 2rem;
+     width: 100%;
+   }
+   
+   
+   .rules-box,
+   .howtoplay-box {
+     flex: 0 0 45%;
+     text-align: left;
+   }
+   
+   
+   .rules-box h3,
+   .howtoplay-box h3 {
+     text-align: center;
+     width: 100%;
+     font-size: 1.8rem;
+     font-weight: 700;
+     text-align: center;
+   }
+   
+   
+   .rules-box ul,
+   .howtoplay-box ul {
+     margin-top: 1rem;
+     padding-left: 1.5rem;
+   }
+   
+   
+   .rules-box h3 + p,
+   .howtoplay-box h3 + p {
+     text-align: center;
+     margin-top: 0.5rem;
+   }
+   
+   
+   .rules-box li,
+   .howtoplay-box li {
+     margin-bottom: 0.5rem;
+   }
+   
+   
+   /* Responsive */
+   @media (max-width: 900px) {
+     .content-row {
+       flex-direction: column;
+       align-items: center;
+     }
+     .rules-box,
+     .howtoplay-box {
+       flex: 1 1 100%;
+     }
+   }
+   
+   
+   /* =========================
+      GAMES PAGE
+      ========================= */
+   
+   
+   .games-bg {
+     background: url("images/games_tennis.jpg") center/cover no-repeat;
+     margin: 1rem 1.5rem 2rem;
+     padding: 2rem 1.25rem 1.5rem;
+     border-radius: 16px;
+   }
+   
+   
+   .games-bg .games-grid {
+     display: flex;
+     flex-direction: column;
+     gap: 1rem;
+   }
+   
+   
+   /* Generic translucent navy box */
+   .games-bg .box {
+     background: rgba(11, 45, 91, 0.65);
+     color: #f0b233;
+     padding: 1.25rem 1.5rem;
+     border-radius: 18px;
+     text-align: center;
+   }
+   
+   
+   /* Title + Subtitle boxes */
+   .games-bg .box.title {
+     font-weight: 800;
+     font-size: clamp(1.6rem, 2.5vw, 2.2rem);
+     max-width: 520px;
+     margin: 0 auto;
+   }
+   
+   
+   .games-bg .box.subtitle {
+     max-width: 960px;
+     margin: 0 auto;
+     line-height: 1.6;
+   }
+   
+   
+   /* Row: Matches (left) + Locations (right) */
+   .games-bg .games-layout {
+     display: flex;
+     gap: 1.5rem;
+     align-items: stretch;
+   }
+   
+   
+   .games-bg .box.matches { flex: 2; }
+   .games-bg .box.locations { flex: 1; }
+   
+   
+   /* Section headings + underline line */
+   .games-bg .box h2 {
+     margin: .2rem 0 .4rem;
+     font-size: clamp(1.2rem, 2vw, 1.5rem);
+     font-weight: 800;
+   }
+   
+   
+   .games-bg .box hr {
+     border: 0;
+     height: 2px;
+     background: #f0b233;
+     width: min(85%, 460px);
+     margin: .4rem auto 1rem;
+     opacity: 0.95;
+     border-radius: 2px;
+   }
+   
+   
+   /* Tables (inside Matches) */
+   .games-bg .matches table {
+     width: 100%;
+     border-collapse: collapse;
+     margin-bottom: 1.25rem;
+   }
+   
+   
+   .games-bg .matches th,
+   .games-bg .matches td {
+     padding: .65rem .5rem;
+     text-align: center;
+     border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+   }
+   
+   
+   .games-bg .matches th {
+     color: #ffffff;
+     background: rgba(240, 178, 51, 0.18);
+     font-weight: 700;
+   }
+   
+   
+   .games-bg .matches tr:last-child td {
+     border-bottom: 0;
+   }
+   
+   
+   .games-bg .matches tr:hover td {
+     background: rgba(240, 178, 51, 0.10);
+   }
+   
+   
+   .games-bg .locations p {
+     margin: 4rem 0;
+     line-height: 1.5;
+   }
+   
+   
+   .games-bg .locations b {
+     color: #ffffff;
+     display: block;
+     margin-bottom: .25rem;
+   }
+   
+   
+   /* Responsive */
+   @media (max-width: 900px) {
+     .games-bg { padding: 1.25rem; }
+     .games-bg .games-layout { flex-direction: column; }
+     .games-bg .box.title,
+     .games-bg .box.subtitle { max-width: 95%; }
+   }
+   
+   
+   footer {
+     background-color: #0b2d5b; /* navy */
+     color: #f0b233; /* gold */
+     padding: 2rem;
+     margin-top: 2rem;
+     margin-bottom: 2rem;
+     border-radius: 16px;
+   
+   
+     display: flex;
+     justify-content: space-between;
+     flex-wrap: wrap;
+     gap: 2rem;
+   }
+   
+   
+   .footer-left,
+   .footer-right {
+     flex: 1 1 45%;
+   }
+   
+   
+   /* Logo */
+   .footer-logo {
+     width: 320px;
+     height: auto;
+     display: block;
+     margin-bottom: 1.5rem;
+   }
+   
+   
+   /* Paragraph in footer-left */
+   .footer-left p {
+     margin-top: 1rem;
+     line-height: 1.6;
+   }
+   
+   
+   footer h3 {
+     margin-bottom: 1rem;
+     font-size: 1.5rem;
+     color: #f0b233;
+   }
+   
+   
+   footer p {
+     line-height: 1.6;
+     margin-bottom: 0.5rem;
+   }
+   
+   
+   /* Responsive */
+   @media screen and (max-width: 900px) {
+     footer {
+       flex-direction: column;
+       text-align: center;
+     }
+   
+   
+     .footer-left,
+     .footer-right {
+       flex: 1 1 100%;
+     }
+   
+   
+     .footer-logo {
+       margin: 0 auto 1.5rem auto; /* center logo with spacing */
+     }
+   
+   
+     .footer-left p {
+       margin-top: 1rem;
+     }
+   }
+  
+
+/*        To fix: 
+           - Make pages more reponsive, make navbar responsive
+           - Make all page stuff glass
+           - Fix Rules and How to Play on how to play page
+           - Make sure all navbar elements are same size
+           - Loading page

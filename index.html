@@ -5,105 +5,129 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="main.css">
+    <link rel="icon" type="image/aggs-icon" href="images/aggs_logo.png">
 </head>
 <body>
-    <!-- Navigation -->
-    <div class="nav-bar">
-        <ul>
-            <a href="index.html" class="active">Home</a>
-            <a href="join.html">Join</a>
-            <a href="games.html">Games</a>
-            <a href="how_to_play.html">How to play</a>
-        </ul>
+
+
+<!-- Navigation Bar/Header -->
+<nav>
+    <div class="nav-left">
+        <div class="navy_logo">
+            <img src="images/navy_logo.png" alt="Navy AGGS Logo">
+        </div>
+        <div class="divider"></div>
+        <h1 class="site-title">AGGS Tennis</h1>
     </div>
-    <div class="navy_logo">
-        <img src="images/navy_logo.png" alt="Navy AGGS Logo">
-    </div>
+    <ul>
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="join.html">Join</a></li>
+        <li><a href="games.html">Games</a></li>
+        <li><a href="how_to_play.html">How to play</a></li>
+    </ul>
+</nav>
 
 
-
-
-    <h1>AGGS Tennis</h1>
-
-
-
-
-    <!-- Hero Section -->
-    <div class="hero">
-        <div class="hero-text-box">
+<!-- Main Section -->
+<main>
+    <div class="img-main">
+        <div class="info">
             <h2>Home</h2>
-            <p>At Auckland Girls' Grammar Tennis, we play with purpose and passion,<br>
-                guided by our core values — pride in every point, respect for our teammates and opponents,<br>
-                integrity on and off the court, diligence in training, and empathy in all we do. Whether you're a<br>
-                beginner or a seasoned player, this is your space to grow, compete, and belong.</p>
+            <p>
+                At Auckland Girls' Grammar Badminton, we play with purpose and passion,
+                guided by our core values — pride in every point, respect for our teammates and opponents,
+                integrity on and off the court, diligence in training, and empathy in all we do.
+                Whether you're a beginner or a seasoned player, this is your space to grow, compete, and belong.
+            </p>
         </div>
     </div>
+</main>
 
 
-
-
-    <!-- Feature Boxes -->
-    <div class="info-boxes">
-        <div class="join_box">
-            <div class="img">
-                <img src="images/join_tennis.jpg" alt="Join Image">
-            </div>
+<!-- Info Boxes -->
+<div class="info-boxes">
+    <div class="info-box join-box">
+        <div class="img">
+            <!-- no <img>, background will go here -->
             <div class="info">
                 <p><strong>Join the team</strong><br>
                     Fill out our form to become a Member</p>
             </div>
         </div>
-        <div class="games_box">
-            <div class="img">
-                <img src="images/games_tennis.jpg" alt="Games Image">
-            </div>
+    </div>
+
+
+    <div class="info-box games-box">
+        <div class="img">
             <div class="info">
                 <p><strong>Games</strong><br>
                     Stay in the loop—matches, times, and courts.</p>
             </div>
         </div>
-        <div class="hot_to_play_box">
-            <div class="img">
-                <img src="images/how-to-play_tennis.jpg" alt="How to play Image">
-            </div>
-            <div class="info">
-                <p><strong>How to play</strong>
-                    New to tennis? Learn the basics here.</p>
-            </div>
-        </div>
     </div>
 
 
+    <div class="info-box how-to-play-box">
+        <div class="img">
+            <div class="info">
+                <p><strong>How to play</strong><br>
+                    New to badminton? Learn the basics here.</p>
+            </div>
+        </div>
+    </div>
+</div>
 
 
-    <!-- Footer -->
-    <footer>
-        <table border="0" width="100%">
-            <tr>
-                <td width="50%">
-                    <img src="images/white_logo.png" alt="AGGS Logo" width="120"><br>
-                    <p>
-                        Auckland Girls’ Grammar School nurtures a culture of excellence through<br>
-                        whānaungatanga, manaakitanga and kairangatanga
-                    </p>
-                </td>
-                <td width="50%">
-                    <h3>Information</h3>
-                    <p>
-                        <b>Club leaders:</b> Nora & Jane<br>
-                        <b>Sports Director:</b> Mr Hipa<br>
-                        <b>Training:</b> Every Friday, 3:30pm–4:30pm<br>
-                        <b>Location:</b> Trainings at YMCA – 149 Greys Ave
-                    </p>
-                    <h3>Contact Us</h3>
-                    <p>
-                        📞 12345678<br>
-                        ✉️ tennisclub@aggs.school.nz<br>
-                        🌐 hipa@aggs.school.nz
-                    </p>
-                </td>
-            </tr>
-        </table>
-    </footer>
+<!-- Footer -->
+<footer class="site-footer">
+  <div class="footer-left">
+    <img src="images/white_logo.png" alt="AGGS Logo" class="footer-logo">
+    <p>
+      Auckland Girls’ Grammar School nurtures a culture of excellence through<br>
+      whānaungatanga, manaakitanga and kairangatanga
+    </p>
+  </div>
+
+
+  <div class="footer-right">
+    <h3>Information</h3>
+    <p>
+      <b>Club leaders:</b> Nora & Jane<br>
+      <b>Sports Director:</b> Mr Hipa<br>
+      <b>Training:</b> Every Friday, 3:30pm–4:30pm<br>
+      <b>Location:</b> Trainings at YMCA – 149 Greys Ave
+    </p>
+
+
+    <h3>Contact Us</h3>
+    <p>
+      📞 02167697772<br>
+      ✉️ tennisclub@aggs.school.nz<br>
+      🌐 hipa@aggs.school.nz
+    </p>
+  </div>
+</footer>
+<script>
+  // Fade in on page load
+  window.addEventListener('DOMContentLoaded', () => {
+    document.body.classList.add('loaded');
+  });
+
+
+  // Fade out when a link is clicked
+  document.querySelectorAll('nav a').forEach(link => {
+    link.addEventListener('click', e => {
+      e.preventDefault(); // stop immediate navigation
+      const href = link.getAttribute('href');
+
+
+      document.body.style.opacity = '0'; // fade out
+
+
+      setTimeout(() => {
+        window.location = href; // navigate after fade
+      }, 400); // match transition duration
+    });
+  });
+</script>
 </body>
-</html>

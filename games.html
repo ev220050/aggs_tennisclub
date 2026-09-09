@@ -1,79 +1,159 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>AGGS Tennis | Join</title>
+    <title>AGGS Tennis | Games</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="main.css">
+    <link rel="icon" type="image/aggs-icon" href="images/aggs_logo.png">
 </head>
 <body>
-    <!-- Navigation -->
-    <div class="nav-bar">
-        <ul>
-            <a href="index.html">Home</a>
-            <a href="join.html" class="active">Join</a>
-            <a href="games.html">Games</a>
-            <a href="how_to_play.html">How to play</a>
-        </ul>
+
+
+<!-- Navigation -->
+<nav>
+    <div class="nav-left">
+        <div class="navy_logo">
+            <img src="images/navy_logo.png" alt="Navy AGGS Logo">
+        </div>
+        <div class="divider"></div>
+        <h1 class="site-title">AGGS Tennis</h1>
     </div>
-    <div class="navy_logo">
-        <img src="images/navy_logo.png" alt="Navy AGGS Logo">
-    </div>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="join.html">Join</a></li>
+        <li><a href="games.html" class="active">Games</a></li>
+        <li><a href="how_to_play.html">How to play</a></li>
+    </ul>
+</nav>
 
 
-
-
-    <h1>AGGS Tennis</h1>
-
-
-
-
-    <!-- Join Content -->
-    <div class="join-box">
-        <h2>Join — How to get involved</h2>
-        <p>Click the link below, fill out the form and click submit.<br>
-            Our team leaders (Nora & Jane) will look through your application<br>
-            within the week and you will be sent a response.<br>
-            Keep an eye out for Tennis Trials notices!</p>
-
-
-
-
-        <a href="https://www.aggs.school.nz/school-life/co-curricular/sports/" class="join-btn">Join</a>
+<section class="games-bg">
+  <div class="games-grid">
+    <!-- Box 1: Title -->
+    <div class="box title">
+      <h2>Games</h2>
     </div>
 
 
+    <!-- Box 2: Subtitle -->
+    <div class="box subtitle">
+      <p>Ready to rally? This is your go-to spot for all our upcoming matches and events.
+        Find out who we’re playing, where the game is happening, and when to show up—
+        because every serve counts, and we’d love to see you there.</p>
+    </div>
 
 
-    <!-- Footer -->
-    <footer>
-        <table border="0" width="100%">
-            <tr>
-                <td width="50%">
-                    <img src="images/white_logo.png" alt="AGGS Logo" width="120"><br>
-                    <p>
-                        Auckland Girls’ Grammar School nurtures a culture of excellence through<br>
-                        whānaungatanga, manaakitanga and kairangatanga
-                    </p>
-                </td>
-                <td width="50%">
-                    <h3>Information</h3>
-                    <p>
-                        <b>Club leaders:</b> Nora & Jane<br>
-                        <b>Sports Director:</b> Mr Hipa<br>
-                        <b>Training:</b> Every Friday, 3:30pm–4:30pm<br>
-                        <b>Location:</b> Trainings at YMCA – 149 Greys Ave
-                    </p>
-                    <h3>Contact Us</h3>
-                    <p>
-                        📞 12345678<br>
-                        ✉️ tennisclub@aggs.school.nz<br>
-                        🌐 hipa@aggs.school.nz
-                    </p>
-                </td>
-            </tr>
+    <!-- Box 3 + 4 in a row -->
+    <div class="games-layout">
+      <!-- Box 3: Matches (left) -->
+      <div class="box matches">
+        <h2>Social Games</h2>
+        <hr>
+        <table>
+          <tr>
+            <th>Date</th><th>Time</th><th>Team</th><th>Location</th>
+          </tr>
+          <tr>
+            <td>Thursday 26 June</td><td>3:30 PM</td>
+            <td>AGGS 3 vs Epsom Girls</td><td>Epsom Girls</td>
+          </tr>
+          <tr>
+            <td>Thursday 3 July</td><td>3:30 PM</td>
+            <td>AGGS 4 vs Glendowie</td><td>ATA</td>
+          </tr>
         </table>
-    </footer>
-</body>
-</html>
 
+
+        <h2>Competitive Games</h2>
+        <hr>
+        <table>
+          <tr>
+            <th>Date</th><th>Time</th><th>Team</th><th>Location</th>
+          </tr>
+          <tr>
+            <td>Monday 16 June</td><td>3:30 PM</td>
+            <td>AGGS 3 vs Epsom Girls</td><td>Epsom Girls</td>
+          </tr>
+          <tr>
+            <td>Monday 23 June</td><td>3:30 PM</td>
+            <td>AGGS 4 vs Glendowie</td><td>ATA</td>
+          </tr>
+        </table>
+      </div>
+
+
+      <!-- Box 4: Locations (right) -->
+      <div class="box locations">
+        <h2>Locations</h2>
+        <hr>
+
+
+        <p><b>Epsom Girls’ Grammar School</b>
+          14 Silver Road, Epsom, Auckland 1023</p>
+
+
+        <p><b>Auckland Tennis Association (ATA)</b>
+          99 Gillies Avenue, Epsom, Auckland 1023</p>
+
+
+        <p><b>YMCA</b>
+          149 Greys Avenue, Central Auckland 1010</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Footer -->
+<footer class="site-footer">
+  <div class="footer-left">
+    <img src="images/white_logo.png" alt="AGGS Logo" class="footer-logo">
+    <p>
+      Auckland Girls’ Grammar School nurtures a culture of excellence through<br>
+      whānaungatanga, manaakitanga and kairangatanga
+    </p>
+  </div>
+
+
+  <div class="footer-right">
+    <h3>Information</h3>
+    <p>
+      <b>Club leaders:</b> Nora & Jane<br>
+      <b>Sports Director:</b> Mr Hipa<br>
+      <b>Training:</b> Every Friday, 3:30pm–4:30pm<br>
+      <b>Location:</b> Trainings at YMCA – 149 Greys Ave
+    </p>
+
+
+    <h3>Contact Us</h3>
+    <p>
+        📞 02167697772<br>
+        ✉️ tennisclub@aggs.school.nz<br>
+        🌐 hipa@aggs.school.nz
+    </p>
+  </div>
+  <script>
+    // Fade in on page load
+    window.addEventListener('DOMContentLoaded', () => {
+      document.body.classList.add('loaded');
+    });
+  
+  
+    // Fade out when a link is clicked
+    document.querySelectorAll('nav a').forEach(link => {
+      link.addEventListener('click', e => {
+        e.preventDefault(); // stop immediate navigation
+        const href = link.getAttribute('href');
+  
+  
+        document.body.style.opacity = '0'; // fade out
+  
+  
+        setTimeout(() => {
+          window.location = href; // navigate after fade
+        }, 400); // match transition duration
+      });
+    });
+  </script>
+</footer>
