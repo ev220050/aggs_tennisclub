@@ -1,3 +1,228 @@
 /* =========================
    DEFAULTS
    ========================= */
+/* Reset some defaults */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+
+
+
+body {
+  background-color: #fff;
+  color: #f0b233; /* Gold text for headings */
+}
+
+
+
+
+/* Navbar */
+.nav-bar {
+  background-color: #fff;
+  display: flex;
+  justify-content: flex-end;
+  padding: 1rem 2rem;
+  border-bottom: 2px solid #f0b233;
+}
+
+
+
+
+.nav-bar ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+
+
+
+.nav-bar a {
+  text-decoration: none;
+  font-weight: bold;
+  color: #0b2d5b;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+}
+
+
+
+
+.nav-bar a:hover, .nav-bar a.active {
+  background-color: #0b2d5b;
+  color: #fff;
+}
+
+
+
+
+/* Logo section*/
+.navy_logo {
+  position: absolute;
+  top: 1rem;
+  left: 2rem;
+}
+
+
+
+
+.navy_logo img {
+  height: 60px;
+}
+
+
+
+
+/* Main Heading section*/
+h1 {
+  color: #f0b233;
+  font-size: 3rem;
+  text-align: left;
+  margin-left: 2rem;
+  margin-top: 1rem;
+}
+
+
+
+
+h2 {
+  color: #f0b233;
+  font-size: 2rem;
+  margin: 1rem 2rem;
+}
+
+
+
+
+p {
+  color: #f0b233;
+  margin: 1rem 2rem;
+  line-height: 1.6;
+}
+
+
+
+
+/* Info Boxes section*/
+.info-boxes {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin: 2rem;
+  flex-wrap: wrap;
+}
+
+
+
+
+.info-boxes > div {
+  flex: 1 1 30%;
+  background-color: #0b2d5b;
+  border-radius: 10px;
+  overflow: hidden;
+  color: #f0b233;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+
+
+
+.info-boxes > div:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 10px 20px rgba(0,0,0,0.3);
+}
+
+
+
+
+.info-boxes img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+
+
+
+.info-boxes .info {
+  padding: 1rem;
+}
+
+
+
+
+/* Button section*/
+button {
+  background-color: #f0b233;
+  color: #fff;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 20px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  margin: 1rem 2rem;
+  transition: background-color 0.3s;
+}
+
+
+
+
+button:hover {
+  background-color: #d19e2f;
+}
+
+
+
+
+/* Footer section*/
+footer {
+  background-color: #0b2d5b;
+  color: #f0b233;
+  padding: 2rem;
+  margin-top: 2rem;
+}
+
+
+
+
+footer img {
+  margin-bottom: 1rem;
+}
+
+
+
+
+footer h3 {
+  color: #f0b233;
+  margin-bottom: 0.5rem;
+}
+
+
+
+
+footer p {
+  line-height: 1.5;
+}
+
+
+
+
+footer table {
+  width: 100%;
+}
+
+
+
+
+@media screen and (max-width: 900px) {
+  .info-boxes {
+      flex-direction: column;
+  }
+}
